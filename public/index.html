@@ -18,9 +18,9 @@
             var b = parseInt(beta)
             var g = parseInt(gamma);
             
-            $('#x').removeClass().addClass("h_" + Math.abs(a)).html(a);
-            $('#y').removeClass().addClass("h_" + Math.abs(b)).html(b);
-            $('#z').removeClass().addClass("h_" + Math.abs(g)).html(g);
+//            $('#x').removeClass().addClass("h_" + Math.abs(a)).html(a);
+//            $('#y').removeClass().addClass("h_" + Math.abs(b)).html(b);
+//            $('#z').removeClass().addClass("h_" + Math.abs(g)).html(g);
             
             
           }, false);
@@ -52,7 +52,7 @@
             $.ajax({
               url: 'http://zetta-cloud.herokuapp.com/hello/brians-iphone',
               type: 'POST',
-              data: { action: 'change', x: alpha, y: beta, z: gamma }
+              data: { action: 'change', x: x, y: y, z: z }
             });
    
           }, 500);

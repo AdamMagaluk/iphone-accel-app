@@ -28,12 +28,17 @@
         }
         
         window.ondevicemotion = function(event) {
-          x = event.acceleration.x;
-          y = event.acceleration.y;
-          z = event.acceleration.z;
+          var mod = 100.0;
+          x = event.acceleration.x * mod;
+          y = event.acceleration.y * mod;
+          z = event.acceleration.z * mod;
           
-          gross = Math.abs(x) + Math.abs(y) + Math.abs(z);
+          gross = Math.abs(x) / mod + Math.abs(y) / mod + Math.abs(z) / mod;
           
+          $('#x').removeClass().addClass("h_" + Math.abs(x)).html(x);
+          $('#y').removeClass().addClass("h_" + Math.abs(y)).html(y);
+          $('#z').removeClass().addClass("h_" + Math.abs(z)).html(z);
+
           $('#x').html(x.toFixed(2));
           $('#y').html(y.toFixed(2));
           $('#z').html(z.toFixed(2));

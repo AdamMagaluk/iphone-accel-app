@@ -34,10 +34,12 @@
           z = event.acceleration.z * mod;
           
           gross = Math.abs(x) / mod + Math.abs(y) / mod + Math.abs(z) / mod;
-          
-          $('#x').removeClass().addClass("h_" + Math.abs(x));
-          $('#y').removeClass().addClass("h_" + Math.abs(y));
-          $('#z').removeClass().addClass("h_" + Math.abs(z));
+      
+      
+
+          $('#x').removeClass().addClass("h_" + Math.abs(parseInt(x)));
+          $('#y').removeClass().addClass("h_" + Math.abs(parseInt(y)));
+          $('#z').removeClass().addClass("h_" + Math.abs(parseInt(z)));
 
           $('#x').html(x.toFixed(2));
           $('#y').html(y.toFixed(2));

@@ -28,16 +28,16 @@
         }
         
         window.ondevicemotion = function(event) {
-          var mod = 100.0;
+          var mod = 10.0;
           x = event.acceleration.x * mod;
           y = event.acceleration.y * mod;
           z = event.acceleration.z * mod;
           
           gross = Math.abs(x) / mod + Math.abs(y) / mod + Math.abs(z) / mod;
           
-          $('#x').removeClass().addClass("h_" + Math.abs(x)).html(x);
-          $('#y').removeClass().addClass("h_" + Math.abs(y)).html(y);
-          $('#z').removeClass().addClass("h_" + Math.abs(z)).html(z);
+          $('#x').removeClass().addClass("h_" + Math.abs(x));
+          $('#y').removeClass().addClass("h_" + Math.abs(y));
+          $('#z').removeClass().addClass("h_" + Math.abs(z));
 
           $('#x').html(x.toFixed(2));
           $('#y').html(y.toFixed(2));

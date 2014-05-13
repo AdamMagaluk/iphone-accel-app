@@ -58,6 +58,7 @@
         };
  
         var deviceName = getCookie('deviceName') || 'external-phone';
+        alert('Device:'+deviceName+' App:'+APP_NAME);
 
         $.ajax({
           url: 'http://zetta-cloud.herokuapp.com/registration',
